@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section text-center bg-light py-1 my-0">
+
+    <h1 class="display-4">Skin Lesion Classification System</h1>
+    <p class="lead">
+        Upload a dermoscopic image to classify skin lesions using the ISIC 2019 dataset.
+    </p>
+
+    <a href="{{ url_for('classify') }}" class="btn btn-primary btn-lg">
+        Classify Skin Lesion
+    </a>
+
+</div>
+
+<!-- Features Section -->
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Lesion Detection</h5>
+                <p class="card-text">
+                    Identify whether the uploaded image contains a skin lesion suitable for analysis.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Skin Lesion Classification</h5>
+                <p class="card-text">
+                    Classify dermoscopic images into ISIC 2019 categories such as
+                    Melanoma (MEL), Nevus (NV), Basal Cell Carcinoma (BCC),
+                    Actinic Keratosis (AK), and other lesion types.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Clinical Information</h5>
+                <p class="card-text">
+                    Learn about different skin lesion types, their characteristics,
+                    and possible clinical interpretations.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

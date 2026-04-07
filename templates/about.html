@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0">
+                <!-- Card Header -->
+                <div class="card-header bg-gradient-primary text-white text-center py-4">
+                    <h2 class="card-title mb-0 h3">About Me</h2>
+                    <p class="lead mt-2 small">The Developer Behind the Skin Tone and Disease Classifier</p>
+                </div>
+
+                <!-- Card Body -->
+                <div class="card-body p-4 text-center">
+                    <!-- Developer Image -->
+                    <div class="mb-3">
+                        <img src="{{ url_for('static', filename='images/heba.jpeg') }}" alt="Developer"
+                            class="img-fluid rounded-circle shadow"
+                            style="width: 150px; height: 150px; object-fit: cover;">
+                    </div>
+
+                    <!-- About Me Content -->
+                    <h3 class="mb-2 h4">Hi, I'm a Developer !</h3>
+                    <p class="lead mb-3 small">
+                        I'm a passionate developer with a focus on creating tools that make a difference in people's
+                        lives. This Skin Tone and Disease Classifier is one of my projects aimed at helping individuals
+                        identify potential skin conditions early.
+                    </p>
+                    <p class="mb-3 small">
+                        Feel free to reach out to me at <a href="mailto:hebaelgamal290@gmail.com"
+                            class="text-decoration-none">hebaelgamal290@gmail.com</a>.
+                    </p>
+
+                    <!-- Social Media Links -->
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="#" class="btn btn-outline-primary btn-sm"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-primary btn-sm"><i class="fab fa-github"></i></a>
+                        <a href="#" class="btn btn-outline-primary btn-sm"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

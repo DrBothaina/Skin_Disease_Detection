@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white text-center">
+                    <h2 class="card-title mb-0">{{ disease_name }}</h2>
+                </div>
+                <div class="card-body">
+                    <!-- Disease Image -->
+                    <div class="text-center mb-4">
+                        <img src="{{ url_for('static', filename='images/' + disease_name|lower + '.jpg') }}"
+                            alt="{{ disease_name }}" class="img-fluid rounded" style="max-width: 300px;">
+                    </div>
+
+                    <!-- Disease Description -->
+                    <p>{{ description }}</p>
+
+                    <!-- Treatment Options -->
+                    <h4>Treatment Options</h4>
+                    <ul>
+                        <li>Consult a dermatologist for professional advice.</li>
+                        <li>Use prescribed medications as directed.</li>
+                        <li>Maintain proper hygiene and skincare routines.</li>
+                    </ul>
+
+                    <!-- Back to Classify Button -->
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('classify') }}" class="btn btn-primary">Back to Classify</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

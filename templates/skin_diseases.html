@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Information Header Section -->
+<div class="hero-section text-center bg-light p-4 mb-4">
+    <h1 class="display-1">Skin Disease Information Center</h1>
+    <p class="lead">
+        This page provides detailed information about various skin diseases. 
+        Each card below includes the name, image, and a short description of a common skin condition. 
+        Understanding these conditions can help with early identification and better communication with healthcare professionals.
+    </p>
+</div>
+
+<!-- Disease Information Section -->
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        {% for disease, description in diseases.items() %}
+        <div class="col">
+            <div class="card h-100">
+                <img src="{{ url_for('static', filename='images/' + disease|lower|replace(' ', '_') + '.jpg') }}"
+     class="card-img-top disease-img"
+     alt="{{ disease }}">
+      <div class="card-body">
+                    <h5 class="card-title">{{ disease }}</h5>
+                    <p class="card-text">{{ description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
